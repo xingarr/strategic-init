@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 180 98% 66%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 180 98% 66%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 180 98% 66%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+
+  body {
+    @apply bg-brand-black text-foreground font-roboto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins;
+  }
+
+  /* Ensure proper stacking context for fixed elements */
+  .fixed {
+    isolation: isolate;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to bottom, #6c6c6c 0%, #ffffff 50%, #dcdcdc 71%, #6c6c6c 86%);
+  }
+
+  .nav-item {
+    @apply text-white hover:text-brand-teal transition-all duration-300 relative;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #55fdf6;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  .nav-item.active {
+    @apply text-brand-teal font-medium;
+  }
+
+  .nav-item.active::after {
+    width: 100%;
+    opacity: 1;
+    height: 2px;
+  }
+
+  .primary-button {
+    @apply bg-brand-teal text-brand-black font-medium px-8 py-3 rounded-full transition-all duration-300;
+    box-shadow: 0 0 0 0 rgba(85, 253, 246, 0);
+  }
+
+  .primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -5px rgba(85, 253, 246, 0.4);
+  }
+
+  .primary-button:active {
+    transform: translateY(0);
+  }
+
+  .secondary-button {
+    @apply bg-white text-brand-black font-medium px-8 py-3 rounded-full transition-all duration-300;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  .secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -5px rgba(255, 255, 255, 0.3);
+  }
+
+  .secondary-button:active {
+    transform: translateY(0);
+  }
+
+  /* Enhanced Marquee styles */
+  .marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee-slant-container {
+    height: 120px; /* Increased height to accommodate slant */
+    transform: rotate(-2deg); /* Slight slant */
+    margin: 20px -5%; /* Negative margin to prevent white space at edges */
+    width: 110%; /* Wider than container to prevent gaps */
+  }
+
+  .marquee-track {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+  }
+
+  .marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  .marquee-left {
+    animation: marquee-left 40s linear infinite;
+  }
+
+  .marquee-right {
+    animation: marquee-right 40s linear infinite;
+  }
+
+  .marquee-background {
+    opacity: 0.7;
+  }
+
+  .marquee-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(30px) rotate(-2deg); /* Offset for overlap */
+    z-index: 1;
+  }
+
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Mobile menu animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Smooth section transitions */
+section {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Container adjustments for proper alignment */
+.container {
+  @apply px-4 md:px-6;
+  max-width: 1400px;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-left {
+  animation: fadeLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-right {
+  animation: fadeRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-bounce-once {
+  animation: bounceOnce 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes bounceOnce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Increased from 20px to 30px for more noticeable movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92); /* Slightly more dramatic scale effect */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation delay utilities - increased delays */
+.delay-100 {
+  animation-delay: 150ms;
+}
+
+.delay-200 {
+  animation-delay: 300ms;
+}
+
+.delay-300 {
+  animation-delay: 450ms;
+}
+
+.delay-400 {
+  animation-delay: 600ms;
+}
+
+.delay-500 {
+  animation-delay: 750ms;
+}
+
+/* Card height utilities */
+.card-height-sm {
+  min-height: 180px;
+}
+
+.card-height-md {
+  min-height: 220px;
+}
+
+.card-height-lg {
+  min-height: 260px;
+}
+
+.card-height-xl {
+  min-height: 320px;
+}
+
+@media (max-width: 768px) {
+  .card-height-sm {
+    min-height: 160px;
+  }
+
+  .card-height-md {
+    min-height: 200px;
+  }
+
+  .card-height-lg {
+    min-height: 240px;
+  }
+
+  .card-height-xl {
+    min-height: 280px;
+  }
+}
+
+/* Page transition animations */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-page-fade-in {
+  animation: pageFadeIn 600ms cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.animate-page-fade-out {
+  animation: pageFadeOut 400ms cubic-bezier(0.32, 0, 0.67, 0) forwards;
+}
+
+/* Ensure content doesn't flash during transitions */
+.page-content {
+  animation: fadeIn 700ms ease-in-out;
+}
