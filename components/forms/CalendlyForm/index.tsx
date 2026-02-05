@@ -22,7 +22,7 @@ export default function CalendlyForm() {
         <div
           ref={ref}
           className="calendly-inline-widget w-full h-full"
-          data-url="https://calendly.com/yohdev/free-consult?hide_gdpr_banner=1"
+          data-url="https://cal.com/dennis-cal/30min"
         />
       </div>
     </div>
