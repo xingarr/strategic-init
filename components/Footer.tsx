@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import { Mail } from "lucide-react"
-import YohDevLogo from "./YohDevLogo"
+import UXCALogo from "./UXCALogo"
 
 export default function Footer() {
   const [email, setEmail] = useState("")
@@ -25,14 +25,14 @@ export default function Footer() {
     <footer className="bg-brand-black pt-20 pb-10 relative overflow-hidden">
       {/* Large background logo */}
       <div className="absolute bottom-0 left-0 right-0 opacity-10 pointer-events-none">
-        <div className="text-[20rem] font-bold text-gray-800 whitespace-nowrap">YohDev</div>
+        <div className="text-[20rem] font-bold text-gray-800 whitespace-nowrap">UXCA</div>
       </div>
 
       <div className="container px-4 md:px-6 mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
-            <YohDevLogo />
+            <UXCALogo />
             <p className="text-gray-400 mt-6 max-w-xs">
               Your team deserves a development partner that understands your goals, delivers on time, and empowers your
               team to learn, grow, and become more agile.
@@ -128,8 +128,8 @@ export default function Footer() {
             </h3>
             <div className="flex items-center mb-6">
               <Mail className="h-5 w-5 text-brand-teal mr-2" />
-              <a href="mailto:yohdev@gmail.com" className="text-gray-400 hover:text-brand-teal transition-colors">
-                hello@yohdev.com
+              <a href="mailto:UXCA@gmail.com" className="text-gray-400 hover:text-brand-teal transition-colors">
+                hello@UXCA.com
               </a>
             </div>
 
@@ -160,7 +160,7 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">© YohDev {currentYear} All Rights Reserved.</p>
+          <p className="text-gray-500 text-sm mb-4 md:mb-0">© UXCA {currentYear} All Rights Reserved.</p>
           <div className="flex space-x-6">
             <Link href="/privacy-policy" className="text-gray-500 hover:text-brand-teal text-sm transition-colors">
               Privacy Policy

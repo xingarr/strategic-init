@@ -34,89 +34,12 @@ export default function AboutPageClient() {
   // Sample team members (placeholders)
   const teamMembers: TeamMember[] = [
     {
-      name: "Andrew Hewitt",
+      name: "Mark V. Smetanin",
       title: "Founder, CEO, & Technical Lead",
       bio: "Passionate about solving problems with elegant solutions. 10+ years experience in web development.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-UHUSPD761-4d4b147fb668-512",
+      image: "",
       linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Greg Pyle",
-      title: "Engineering Manager",
-      bio: "Creating intuitive and beautiful user experiences that drive engagement and conversion.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U08TXCZSWTC-9f005fbc9230-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Genesis Figueroa",
-      title: "Executive Assistant",
-      bio: "Ensuring projects are delivered on time, on budget, and exceed expectations.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U0643SXFYBW-594190dade5f-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Alyson Hewitt",
-      title: "Co-Founder, Marketing Manager",
-      bio: "Ensuring projects are delivered on time, on budget, and exceed expectations.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U07NZ8YNXTK-18f1d02180c1-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Von Kaukeano",
-      title: "Co-Founder, DevOps Manager",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-UK7ASE4LC-d92a3bf9d1cf-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Alexandre Calvão",
-      title: "Fullstack Engineer",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U08E1EWKUVC-9760c8a2277c-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Dennis Stephens",
-      title: "Fullstack Engineer",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U060JHLAZJ7-8a0e7c77a2df-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Will Staves",
-      title: "Fullstack Web Developer",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U06RBE038FK-c8abf5347bf2-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Kegan Quimby",
-      title: "Fullstack Web Developer",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U08FK8ECWJV-26aab32b9aad-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Jack Walker",
-      title: "Fullstack Web Developer",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U07ABBVSC12-a726f5093f83-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Mike Dee",
-      title: "SEO & Analytics",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U05L9NLT3QD-2427b96d309d-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
-    {
-      name: "Saad R.",
-      title: "UX/UI Design & Developer",
-      bio: "Specializing in modern JavaScript frameworks and serverless architecture.",
-      image: "https://ca.slack-edge.com/THYR4QGTY-U07SHGS6H7B-2a2aae4b403b-512",
-      linkedin: "https://linkedin.com/in/username",
-    },
+    }
   ]
 
   return (
