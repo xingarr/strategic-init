@@ -293,7 +293,7 @@ export default function DiscoverySessionForm() {
             <div>
               <p className="text-sm text-gray-500">What to Expect</p>
               <p className="text-gray-300">
-                We'll discuss your goals, challenges, and explore how YohDev can help you achieve your vision.
+                We'll discuss your goals, challenges, and explore how UXCA can help you achieve your vision.
               </p>
             </div>
           </div>

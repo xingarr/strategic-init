@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function YohDevLogo({
+export default function UXCALogo({
   href = "/",
   width = 100,
   height = 33,
   className = "h-7 w-auto",
-  alt = "YohDev Logo",
+  alt = "UXCA Logo",
   ...props
 }: {
   href?: string;
@@ -21,7 +21,7 @@ export default function YohDevLogo({
   return (
     <Link href={href} aria-label={alt}>
       <Image
-        src="/images/YohDev_Logo_White.png"
+        src="/images/UXCA_Logo_White.png"
         alt={alt}
         width={width}
         height={height}

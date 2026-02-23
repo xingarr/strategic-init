@@ -5,7 +5,7 @@ export default function About() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About YohDev</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About UXCA</h2>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 We are a team of passionate developers and designers dedicated to creating exceptional digital
                 experiences.
@@ -13,7 +13,7 @@ export default function About() {
             </div>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                Founded in 2020, YohDev has been helping businesses of all sizes establish their online presence and
+                Founded in 2020, UXCA has been helping businesses of all sizes establish their online presence and
                 grow their digital footprint. Our team combines technical expertise with creative thinking to deliver
                 solutions that not only look great but also perform exceptionally well.
               </p>
